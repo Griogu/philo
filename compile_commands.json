@@ -1,0 +1,20 @@
+[
+{
+	"directory": "/nfs/homes/mpendilh/Documents/cursus/philosophers/philo",
+	"arguments": ["cc", "-g", "-Wall", "-Wextra", "-Werror", "-c", "-o", "exec.o", "exec.c"],
+	"file": "exec.c",
+	"output": "exec.o"
+},
+{
+	"directory": "/nfs/homes/mpendilh/Documents/cursus/philosophers/philo",
+	"arguments": ["cc", "-g", "-Wall", "-Wextra", "-Werror", "-c", "-o", "error.o", "error.c"],
+	"file": "error.c",
+	"output": "error.o"
+},
+{
+	"directory": "/nfs/homes/mpendilh/Documents/cursus/philosophers/philo",
+	"arguments": ["cc", "-g", "-Wall", "-Wextra", "-Werror", "-c", "-o", "parsing.o", "parsing.c"],
+	"file": "parsing.c",
+	"output": "parsing.o"
+}
+]
