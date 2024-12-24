@@ -28,7 +28,9 @@ DEFAULT = "\e[39m"
 
 SRCS = exec.c \
 	   error.c \
-	   parsing.c
+	   parsing.c \
+	   thread.c \
+	   routine.c
 
 #-----------------------------------------------------RULES-----------------------------------------------#
 
