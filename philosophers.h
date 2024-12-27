@@ -6,7 +6,7 @@
 /*   By: mpendilh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 15:44:27 by mpendilh          #+#    #+#             */
-/*   Updated: 2024/12/24 16:46:28 by griogu           ###   ########.fr       */
+/*   Updated: 2024/12/26 17:44:01 by griogu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PHILOSOPHERS_H
@@ -24,6 +24,7 @@
 # include <string.h>
 # include <stdio.h>
 # include <limits.h> 
+# include <unistd.h>
 
 typedef struct s_philo
 {
