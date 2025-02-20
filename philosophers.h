@@ -6,7 +6,7 @@
 /*   By: mpendilh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 15:44:27 by mpendilh          #+#    #+#             */
-/*   Updated: 2025/01/03 13:33:55 by mpendilh         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:41:04 by mpendilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PHILOSOPHERS_H
@@ -17,7 +17,7 @@
 # define EAT "| is eating.🍝\033[00m\n"
 # define SLEEP "| is sleeping.🛏️\033[00m\n"
 # define THINK "| is thinking.🤔\033[00m\n"
-# define DIE "\033[31;03m| %-10llums  💀 philosopher %-5d | died.⚰️\033[00m\n"
+# define DIE "\033[31;03m| %-10llums | 💀 philosopher %-5d| died.⚰️\033[00m\n"
 # define ERROR_MESSAGE "Error\n"
 # define SETTINGS_ERROR "nbr_philo, time : die, eat, sleep [philo_must_eat].\n"
 # define ARGS_ERROR "Wrong arguments.\n"

@@ -6,7 +6,7 @@
 /*   By: mpendilh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:34:28 by mpendilh          #+#    #+#             */
-/*   Updated: 2025/01/03 13:27:59 by mpendilh         ###   ########.fr       */
+/*   Updated: 2025/01/06 16:55:43 by mpendilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "philosophers.h"
@@ -28,6 +28,11 @@ long long	timestamp(void)
 bool	is_dead(t_philo *philo)
 {
 	pthread_mutex_lock(philo->dead);
+	if (*philo->is_dead)
+	{
+		pthread_mutex_unlock(philo->dead);
+		return (true);
+	}
 	if (timestamp() - philo->start >= philo->time_to_die)
 	{
 		printf_message(philo, 4);

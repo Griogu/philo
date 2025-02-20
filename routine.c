@@ -6,16 +6,13 @@
 /*   By: griogu <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 16:45:20 by griogu            #+#    #+#             */
-/*   Updated: 2025/01/03 13:36:23 by mpendilh         ###   ########.fr       */
+/*   Updated: 2025/01/07 09:05:32 by mpendilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "philosophers.h"
 
 static int	ft_sleep(t_philo *philo)
 {
-	int					i;
-
-	i = 0;
 	printf_message(philo, 2);
 	while (timestamp() - philo->start
 		< philo->time_to_sleep + philo->time_to_eat)
@@ -23,7 +20,6 @@ static int	ft_sleep(t_philo *philo)
 		usleep(1000);
 		if (is_dead(philo))
 			return (1);
-		i++;
 	}
 	printf_message(philo, 3);
 	return (0);
@@ -31,9 +27,6 @@ static int	ft_sleep(t_philo *philo)
 
 static int	eat(t_philo *philo)
 {
-	int	i;
-
-	i = 0;
 	if (is_dead(philo))
 		return (1);
 	printf_message(philo, 1);
@@ -46,7 +39,6 @@ static int	eat(t_philo *philo)
 			unlock_forks(philo);
 			return (1);
 		}
-		i++;
 	}
 	unlock_forks(philo);
 	if (ft_sleep(philo))
@@ -83,7 +75,7 @@ static void	routine(t_philo *philo)
 	smart_sleep(philo);
 	if (philo->number_of_meal != -1)
 	{
-		while (philo->number_of_meal > 0 && !*philo->is_dead)
+		while (philo->number_of_meal > 0 && !is_dead(philo))
 		{
 			if (take_fork(philo))
 				break ;
@@ -95,7 +87,7 @@ static void	routine(t_philo *philo)
 	}
 	else
 	{
-		while (!*philo->is_dead)
+		while (!is_dead(philo))
 		{
 			if (take_fork(philo))
 				break ;
